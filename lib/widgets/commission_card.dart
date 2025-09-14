@@ -114,11 +114,12 @@ class CommissionCard extends StatelessWidget {
               ],
             ),
             // 콘텐츠
-            Padding(
-              padding: const EdgeInsets.all(12),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
+            Expanded(
+              child: Padding(
+                padding: const EdgeInsets.all(12),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
                   // 작성자 정보
                   Row(
                     children: [
@@ -151,32 +152,34 @@ class CommissionCard extends StatelessWidget {
                   ),
                   const SizedBox(height: 8),
                   // 태그들
-                  Wrap(
-                    spacing: 4,
-                    runSpacing: 4,
-                    children: commission.tags.take(3).map((tag) {
-                      return Container(
-                        padding: const EdgeInsets.symmetric(
-                          horizontal: 6,
-                          vertical: 2,
-                        ),
-                        decoration: BoxDecoration(
-                          color: Colors.purple[50],
-                          borderRadius: BorderRadius.circular(8),
-                          border: Border.all(
-                            color: Colors.purple[200]!,
-                            width: 0.5,
+                  Flexible(
+                    child: Wrap(
+                      spacing: 4,
+                      runSpacing: 4,
+                      children: commission.tags.take(2).map((tag) {
+                        return Container(
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 6,
+                            vertical: 2,
                           ),
-                        ),
-                        child: Text(
-                          tag,
-                          style: TextStyle(
-                            fontSize: 10,
-                            color: Colors.purple[700],
+                          decoration: BoxDecoration(
+                            color: Colors.purple[50],
+                            borderRadius: BorderRadius.circular(8),
+                            border: Border.all(
+                              color: Colors.purple[200]!,
+                              width: 0.5,
+                            ),
                           ),
-                        ),
-                      );
-                    }).toList(),
+                          child: Text(
+                            tag,
+                            style: TextStyle(
+                              fontSize: 10,
+                              color: Colors.purple[700],
+                            ),
+                          ),
+                        );
+                      }).toList(),
+                    ),
                   ),
                   const SizedBox(height: 8),
                   // 가격 및 작업 기간
@@ -188,30 +191,37 @@ class CommissionCard extends StatelessWidget {
                         color: Colors.grey[600],
                       ),
                       const SizedBox(width: 4),
-                      Text(
-                        commission.formattedPrice,
-                        style: TextStyle(
-                          fontSize: 12,
-                          color: Colors.grey[600],
+                      Expanded(
+                        child: Text(
+                          commission.formattedPrice,
+                          style: TextStyle(
+                            fontSize: 12,
+                            color: Colors.grey[600],
+                          ),
+                          overflow: TextOverflow.ellipsis,
                         ),
                       ),
-                      const SizedBox(width: 12),
+                      const SizedBox(width: 8),
                       Icon(
                         Icons.schedule,
                         size: 14,
                         color: Colors.grey[600],
                       ),
                       const SizedBox(width: 4),
-                      Text(
-                        '납품 ${commission.formattedWorkingDays}',
-                        style: TextStyle(
-                          fontSize: 12,
-                          color: Colors.grey[600],
+                      Expanded(
+                        child: Text(
+                          '${commission.formattedWorkingDays}',
+                          style: TextStyle(
+                            fontSize: 12,
+                            color: Colors.grey[600],
+                          ),
+                          overflow: TextOverflow.ellipsis,
                         ),
                       ),
                     ],
                   ),
                 ],
+                ),
               ),
             ),
           ],
