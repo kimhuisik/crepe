@@ -1,0 +1,38 @@
+[
+  {
+    "id": "banner_1",
+    "title": "커미션 이용 방법",
+    "subtitle": "쉽게 알려드려요",
+    "imageUrl": "https://via.placeholder.com/400x200/E8B4F8/FFFFFF?text=커미션+이용+방법",
+    "backgroundColor": "#E8B4F8",
+    "order": 1,
+    "isActive": true
+  },
+  {
+    "id": "banner_2",
+    "title": "쿠폰 찾아내서 경제로",
+    "subtitle": "1.5% 즉시할인",
+    "imageUrl": "https://via.placeholder.com/400x200/4A90E2/FFFFFF?text=1.5%25+즉시할인",
+    "backgroundColor": "#4A90E2",
+    "order": 2,
+    "isActive": true
+  },
+  {
+    "id": "banner_3",
+    "title": "커미션 작품, 실물 판매는 어디?",
+    "subtitle": "통판은 TMM에서!",
+    "imageUrl": "https://via.placeholder.com/400x200/7ED321/FFFFFF?text=통판은+TMM에서",
+    "backgroundColor": "#7ED321",
+    "order": 3,
+    "isActive": true
+  },
+  {
+    "id": "banner_4",
+    "title": "완성된 작품이 여기 있어요!",
+    "subtitle": "성공적인 커미션 완료 ✨",
+    "imageUrl": "assets/images/banner_success.png",
+    "backgroundColor": "#E8F5E8",
+    "order": 4,
+    "isActive": true
+  }
+] 

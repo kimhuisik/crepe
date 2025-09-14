@@ -1,0 +1,74 @@
+[
+  {
+    "id": "writing",
+    "name": "글",
+    "icon": "📝",
+    "color": "#FF6B6B",
+    "commissionCount": 1250,
+    "isPopular": true
+  },
+  {
+    "id": "illustration",
+    "name": "그림",
+    "icon": "🎨",
+    "color": "#4ECDC4",
+    "commissionCount": 2890,
+    "isPopular": true
+  },
+  {
+    "id": "craft",
+    "name": "수공예",
+    "icon": "🧸",
+    "color": "#45B7D1",
+    "commissionCount": 567,
+    "isPopular": false
+  },
+  {
+    "id": "design",
+    "name": "디자인",
+    "icon": "⚖️",
+    "color": "#96CEB4",
+    "commissionCount": 789,
+    "isPopular": false
+  },
+  {
+    "id": "fortune",
+    "name": "점술",
+    "icon": "🔮",
+    "color": "#FFEAA7",
+    "commissionCount": 234,
+    "isPopular": false
+  },
+  {
+    "id": "sound",
+    "name": "사운드",
+    "icon": "🎵",
+    "color": "#DDA0DD",
+    "commissionCount": 156,
+    "isPopular": false
+  },
+  {
+    "id": "other",
+    "name": "기타",
+    "icon": "💡",
+    "color": "#F39C12",
+    "commissionCount": 445,
+    "isPopular": false
+  },
+  {
+    "id": "request",
+    "name": "구해요",
+    "icon": "🔍",
+    "color": "#E74C3C",
+    "commissionCount": 178,
+    "isPopular": false
+  },
+  {
+    "id": "tmm",
+    "name": "TMM",
+    "icon": "📦",
+    "color": "#9B59B6",
+    "commissionCount": 89,
+    "isPopular": false
+  }
+] 
