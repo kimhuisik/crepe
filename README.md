@@ -195,7 +195,7 @@ assets/
 
 ## 👨‍💻 개발자
 
-**김휘식** - [@kimhuisik](https://github.com/kimhuisik)
+**김희식** - [@kimhuisik](https://github.com/kimhuisik)
 
 프로젝트 링크: [https://github.com/kimhuisik/crepe](https://github.com/kimhuisik/crepe)
 
