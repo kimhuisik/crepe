@@ -116,10 +116,12 @@ class CommissionCard extends StatelessWidget {
             // 콘텐츠
             Expanded(
               child: Padding(
-                padding: const EdgeInsets.all(10),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
+                padding: const EdgeInsets.all(8),
+                child: SingleChildScrollView(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
                   // 작성자 정보
                   Row(
                     children: [
@@ -150,38 +152,31 @@ class CommissionCard extends StatelessWidget {
                     maxLines: 2,
                     overflow: TextOverflow.ellipsis,
                   ),
-                  const SizedBox(height: 6),
+                  const SizedBox(height: 4),
                   // 태그들
-                  Flexible(
-                    child: Wrap(
-                      spacing: 4,
-                      runSpacing: 2,
-                      children: commission.tags.take(2).map((tag) {
-                        return Container(
-                          padding: const EdgeInsets.symmetric(
-                            horizontal: 5,
-                            vertical: 1,
-                          ),
-                          decoration: BoxDecoration(
-                            color: Colors.purple[50],
-                            borderRadius: BorderRadius.circular(8),
-                            border: Border.all(
-                              color: Colors.purple[200]!,
-                              width: 0.5,
-                            ),
-                          ),
-                          child: Text(
-                            tag,
-                            style: TextStyle(
-                              fontSize: 9,
-                              color: Colors.purple[700],
-                            ),
-                          ),
-                        );
-                      }).toList(),
+                  if (commission.tags.isNotEmpty)
+                    Container(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 5,
+                        vertical: 1,
+                      ),
+                      decoration: BoxDecoration(
+                        color: Colors.purple[50],
+                        borderRadius: BorderRadius.circular(8),
+                        border: Border.all(
+                          color: Colors.purple[200]!,
+                          width: 0.5,
+                        ),
+                      ),
+                      child: Text(
+                        commission.tags.first,
+                        style: TextStyle(
+                          fontSize: 9,
+                          color: Colors.purple[700],
+                        ),
+                      ),
                     ),
-                  ),
-                  const SizedBox(height: 6),
+
                   // 가격 및 작업 기간
                   Row(
                     children: [
@@ -220,7 +215,8 @@ class CommissionCard extends StatelessWidget {
                       ),
                     ],
                   ),
-                ],
+                                    ],
+                  ),
                 ),
               ),
             ),
