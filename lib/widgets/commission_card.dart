@@ -116,7 +116,7 @@ class CommissionCard extends StatelessWidget {
             // 콘텐츠
             Expanded(
               child: Padding(
-                padding: const EdgeInsets.all(12),
+                padding: const EdgeInsets.all(10),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -139,7 +139,7 @@ class CommissionCard extends StatelessWidget {
                       ),
                     ],
                   ),
-                  const SizedBox(height: 8),
+                  const SizedBox(height: 6),
                   // 제목
                   Text(
                     commission.title,
@@ -150,17 +150,17 @@ class CommissionCard extends StatelessWidget {
                     maxLines: 2,
                     overflow: TextOverflow.ellipsis,
                   ),
-                  const SizedBox(height: 8),
+                  const SizedBox(height: 6),
                   // 태그들
                   Flexible(
                     child: Wrap(
                       spacing: 4,
-                      runSpacing: 4,
+                      runSpacing: 2,
                       children: commission.tags.take(2).map((tag) {
                         return Container(
                           padding: const EdgeInsets.symmetric(
-                            horizontal: 6,
-                            vertical: 2,
+                            horizontal: 5,
+                            vertical: 1,
                           ),
                           decoration: BoxDecoration(
                             color: Colors.purple[50],
@@ -173,7 +173,7 @@ class CommissionCard extends StatelessWidget {
                           child: Text(
                             tag,
                             style: TextStyle(
-                              fontSize: 10,
+                              fontSize: 9,
                               color: Colors.purple[700],
                             ),
                           ),
@@ -181,7 +181,7 @@ class CommissionCard extends StatelessWidget {
                       }).toList(),
                     ),
                   ),
-                  const SizedBox(height: 8),
+                  const SizedBox(height: 6),
                   // 가격 및 작업 기간
                   Row(
                     children: [

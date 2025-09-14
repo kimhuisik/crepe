@@ -164,7 +164,7 @@ class _CommissionListScreenState extends State<CommissionListScreen> {
                           padding: const EdgeInsets.all(16),
                           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                             crossAxisCount: 2,
-                            childAspectRatio: 0.75,
+                            childAspectRatio: 0.78,
                             crossAxisSpacing: 12,
                             mainAxisSpacing: 12,
                           ),
